@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>APAE Inclusão | Encontre seu lugar no mercado de trabalho</title>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14263d;--mut:#44566b;--bg:#f4f6fa;--card:#fff;--line:#d3dae6;--blue:#1b56c4;--blue2:#e6eefc;--sun:#f5c035;--ok:#16714f;--ok2:#e2f4ec;--bad:#b3261e;--fs:17px;--on:#fff;--chip:#e9edf4;--nob:#fbe3e1;--track:#e3e8f0}
+body.hc{--ink:#000;--mut:#000;--bg:#fff;--line:#000;--blue:#0030a0;--blue2:#fff;--ok:#005a36;--bad:#8a0000}
+body.dk{color-scheme:dark;--ink:#e8eef7;--mut:#b4c2d4;--bg:#0f1824;--card:#182436;--line:#33445a;--blue:#7fadff;--blue2:#1c2c46;--ok:#5fd0a0;--ok2:#173a2e;--bad:#ff958d;--on:#0b1626;--chip:#26364d;--nob:#4a2321;--track:#2c3d54}
+*{box-sizing:border-box}html{font-size:var(--fs)}
+body{margin:0;font-family:'Atkinson Hyperlegible',Verdana,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+body.hc .c,body.hc header,body.hc input,body.hc select,body.hc textarea{border:2px solid #000}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:.5rem;z-index:9}
+header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:.4rem 1rem;justify-content:space-between;align-items:center;padding:.6rem 1.25rem}
+.brand{display:flex;gap:.7rem;align-items:center;background:none;border:0;font:inherit;color:inherit;cursor:pointer;text-align:left;font-weight:700}
+.brand i{font-style:normal;width:2.4rem;height:2.4rem;border-radius:.6rem;background:var(--blue);color:var(--on);display:grid;place-items:center;border-bottom:.3rem solid var(--sun)}
+.brand small{display:block;font-weight:400;color:var(--mut);font-size:.75rem}
+main{max-width:1100px;margin:0 auto;padding:1.5rem 1.25rem 4rem}
+h1{font-size:2rem;line-height:1.15;margin:.2rem 0 .4rem}h2{font-size:1.3rem;margin:1.6rem 0 .7rem}h3{margin:0 0 .2rem;font-size:1.1rem}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);max-width:17ch}.lead{font-size:1.2rem;max-width:42ch;color:var(--mut)}
+.row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}.sp{justify-content:space-between}
+.mu{color:var(--mut);margin:.1rem 0 .6rem}.sm{font-size:.9rem;margin:.4rem 0}.bad{color:var(--bad);font-weight:700}
+.c{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1rem 1.1rem;margin:0 0 .8rem}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.9rem}.g .c{margin:0}
+.b{font:inherit;font-weight:700;min-height:44px;padding:.5rem 1.1rem;border-radius:.6rem;border:2px solid var(--blue);background:var(--blue);color:var(--on);cursor:pointer}
+.b.s{background:var(--card);color:var(--blue)}.b.gh{border-color:transparent;background:none;color:var(--ink);padding:.5rem .7rem}
+.b:disabled{background:var(--ok2);border-color:var(--ok);color:var(--ok);cursor:default}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.hd{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:space-between;align-items:flex-start;margin-bottom:1rem}.hd p{margin:0;max-width:60ch}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;list-style:none;padding:0;margin:1.5rem 0;counter-reset:n}
+.how li{counter-increment:n;border-left:4px solid var(--sun);padding-left:.9rem}.how li:before{content:counter(n);font-weight:700;color:var(--blue);font-size:1.4rem}
+.how b,.how span{display:block}.how span{color:var(--mut)}
+.pick{text-align:left;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:.3rem;border:2px solid var(--line);min-height:150px}
+.pick:hover{border-color:var(--blue)}.pick b{font-size:1.15rem}.ic{font-size:2rem}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem;align-items:start;margin-top:1.2rem}.two h2{margin-top:0}.two .g{grid-template-columns:1fr 1fr}.two .pick{min-height:0}
+.fm label,dialog label{display:block;font-weight:700;margin:.8rem 0}
+input,select,textarea{display:block;width:100%;font:inherit;padding:.55rem .7rem;border:1px solid var(--mut);border-radius:.5rem;margin-top:.25rem;background:var(--card);color:var(--ink);font-weight:400}
+label.sm select{display:inline-block;width:auto}
+.tabs{display:flex;gap:.3rem;flex-wrap:wrap;border-bottom:2px solid var(--line);margin:1.2rem 0 1rem}
+.tabs button{font:inherit;font-weight:700;background:none;border:0;border-bottom:4px solid transparent;padding:.7rem .9rem;cursor:pointer;color:var(--mut);margin-bottom:-2px}
+.tabs button[aria-selected=true]{color:var(--blue);border-color:var(--blue)}
+.st{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0;margin:.5rem 0 1rem;counter-reset:s}
+.st li{counter-increment:s;padding:.35rem .8rem;border-radius:2rem;border:1px solid var(--line);background:var(--card);font-size:.9rem}
+.st li:before{content:counter(s)'. '}.st li.dn{background:var(--ok2);border-color:var(--ok);color:var(--ok)}.st li.cu{background:var(--blue);color:var(--on);font-weight:700;border-color:var(--blue)}
+.nx{background:var(--blue2);border-left:6px solid var(--sun);border-radius:.6rem;padding:.8rem 1rem;display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;align-items:center;justify-content:space-between}.nx p{margin:0}
+.chip{display:inline-block;padding:.1rem .6rem;border-radius:1rem;background:var(--chip);color:var(--ink);font-size:.85rem;margin:0 .3rem .3rem 0}
+.chip.ok{background:var(--ok2);color:var(--ok)}.chip.no{background:var(--nob);color:var(--bad)}
+.bar{height:.7rem;background:var(--track);border-radius:1rem;overflow:hidden;flex:1;min-width:80px}.bar i{display:block;height:100%;background:var(--blue)}
+.br{display:flex;gap:.7rem;align-items:center;margin:.5rem 0}.br span{width:11rem;font-size:.9rem}
+.k{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:.8rem 1rem}.k b{font-size:1.8rem;display:block;line-height:1.1}.k span{color:var(--mut);font-size:.9rem}
+.emp{text-align:center;padding:1.6rem}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--card)}th,td{text-align:left;padding:.6rem;border-bottom:1px solid var(--line)}
+dialog{border:0;background:var(--card);color:var(--ink);border-radius:.9rem;padding:1.4rem;max-width:min(520px,92vw);width:100%}dialog::backdrop{background:#0008}dialog h2{margin-top:0}
+#toast{position:fixed;left:50%;bottom:1.2rem;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:.7rem 1.1rem;border-radius:.6rem;display:none;z-index:20;max-width:90vw}#toast.on{display:block}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<header>
+<button class="brand" onclick="T[U&&U.p]=0;go()" aria-label="APAE Inclusão, ir para o início"><i>A</i><span>APAE Inclusão<small>Plataforma de Intermediação Profissional</small></span></button>
+<div class="row"><button class="b gh" id="help" hidden onclick="help()">? Ajuda</button><button class="b gh" id="dk" aria-pressed="false" onclick="tema(document.body.classList.contains('dk')?'':'dk')">Modo escuro</button><button class="b gh" id="hc" aria-pressed="false" onclick="tema(document.body.classList.contains('hc')?'':'hc')">Contraste</button><button class="b gh" onclick="fz(-1)" aria-label="Diminuir texto">A-</button><button class="b gh" onclick="fz(1)" aria-label="Aumentar texto">A+</button><span id="usr" class="row"></span></div>
+</header>
+<main id="main"></main>
+<dialog id="dlg"></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+const $=s=>document.querySelector(s),h=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const K='apae-final',ST=['Em triagem','Em qualificação','Pronto para vaga','Em processo seletivo','Inserido no mercado'],PL={as:'Assistido',pr:'Equipe APAE',em:'Empresa',ad:'Gestão'};
+const P={as:{ic:'🧑',t:'Sou assistido',d:'Ver vagas para mim e acompanhar minhas candidaturas.',h:['Em "Vagas para você" veja o que combina com suas habilidades.','Clique em "Quero me candidatar" na vaga que gostou.','Acompanhe cada etapa em "Minhas candidaturas".']},
+pr:{ic:'🩺',t:'Sou da equipe da APAE',d:'Cuidar dos assistidos e das oficinas e indicar vagas.',h:['Cadastre assistidos e atualize a etapa de cada um.','Em "Vagas e matching" veja quem combina com cada vaga e indique.','Depois da contratação, registre o acompanhamento.']},
+em:{ic:'🏢',t:'Sou uma empresa',d:'Anunciar vagas e conhecer candidatos preparados.',h:['Anuncie uma vaga e informe as habilidades que ela pede.','Em "Candidatos" veja quem combina e atualize a etapa.','Ao contratar, envie um feedback para a APAE.']},
+ad:{ic:'📊',t:'Sou da gestão',d:'Ver números, usuários e o histórico de ações.',h:['Veja os números principais no topo da tela.','Em "Usuários" ative ou desative contas.','"Registro de ações" mostra tudo o que foi feito.']}};
+const seed=()=>({seen:{},
+as:[{id:1,n:'João Silva',e:'joao@apae.demo',d:'Intelectual',s:1,sk:['organização','atendimento','informática básica'],i:'Administração, estoque',t:'Manhã',o:'Prefere instruções passo a passo'},
+{id:2,n:'Ana Lima',e:'ana@apae.demo',d:'Auditiva',s:3,sk:['atendimento','digitação','organização'],i:'Recepção',t:'Tarde',o:'Prefere comunicação escrita'},
+{id:3,n:'Pedro Souza',e:'pedro@apae.demo',d:'TEA',s:4,sk:['estoque','rotina','conferência'],i:'Logística',t:'Integral',o:'Rotina fixa'}],
+us:[{id:11,n:'Dra. Maria (Psicóloga)',e:'maria@apae.demo',p:'pr'},{id:12,n:'TechInclusiva S.A.',e:'rh@techinclusiva.demo',p:'em'},{id:13,n:'Gestão Geral',e:'gestao@apae.demo',p:'ad'},{id:14,n:'Mercado Bom Preço',e:'rh@bompreco.demo',p:'em'}],
+vg:[{id:1,t:'Auxiliar administrativo',e:'TechInclusiva S.A.',r:1800,l:'São Paulo',q:['organização','informática básica','atendimento'],a:'Rampa de acesso e intérprete de Libras',x:'Organizar documentos e atender ligações.',o:true},
+{id:2,t:'Assistente de estoque',e:'Mercado Bom Preço',r:1620,l:'Itapetininga',q:['estoque','conferência','organização'],a:'Rotina fixa e mentor de adaptação',x:'Receber e organizar produtos.',o:true},
+{id:3,t:'Recepcionista',e:'TechInclusiva S.A.',r:1700,l:'São Paulo',q:['atendimento','digitação'],a:'Comunicação por escrito e telas de apoio',x:'Receber visitantes e registrar entradas.',o:true},
+{id:4,t:'Auxiliar de logística',e:'Mercado Bom Preço',r:1750,l:'Itapetininga',q:['estoque','rotina','conferência'],a:'Ambiente com baixo ruído',x:'Separar e conferir pedidos.',o:true}],
+of:[{id:1,t:'Informática básica',p:'Prof. Carlos',h:40,s:'Ativa',d:'Editor de texto, planilhas e e-mail.',en:[1,2]},{id:2,t:'Atendimento ao público',p:'Profa. Renata',h:30,s:'Ativa',d:'Como receber e orientar pessoas.',en:[1,2,3]},{id:3,t:'Organização e estoque',p:'Prof. Daniel',h:24,s:'Concluída',d:'Separação e conferência de itens.',en:[3]}],
+ca:[{a:2,v:3,s:'Entrevista'},{a:3,v:4,s:'Contratado'}],
+fb:[{a:3,v:4,by:'Dra. Maria (Psicóloga)',n:5,c:'Adaptou-se bem à rotina e é elogiado pela equipe.',d:'20/10/2026'}],lg:[]});
+let D;try{D=JSON.parse(localStorage.getItem(K))}catch(e){}D=D||seed();
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(D))}catch(e){}};
+let U=null,T={},F='',MV=0,FS=17;
+const me=()=>D.as.find(a=>a.id==U.id),vg=i=>D.vg.find(v=>v.id==i),nid=a=>Math.max(0,...a.map(x=>x.id))+1,sl=s=>s.split(',').map(x=>x.trim().toLowerCase()).filter(Boolean);
+const nm=()=>U?U.p=='as'?me().n:D.us.find(x=>x.id==U.id).n:'Sistema';
+const lg=m=>D.lg.unshift({t:new Date().toLocaleString('pt-BR'),u:nm(),m});
+const chip=(s,c='')=>`<span class="chip ${c}">${h(s)}</span>`,chips=(a,c)=>a.map(x=>chip(x,c)).join('');
+const mt=(a,v)=>{const y=v.q.filter(x=>a.sk.includes(x));return{p:Math.round(y.length/v.q.length*100),y,m:v.q.filter(x=>!y.includes(x))}};
+const hd=(t,s,a='')=>`<div class="hd"><div><h1>${t}</h1><p class="mu">${s}</p></div><div class="row">${a}</div></div>`;
+const empty=(m,t,l)=>`<div class="c emp"><p>${m}</p><button class="b" onclick="T[U.p]='${t}';go()">${l}</button></div>`;
+const bar=(l,v,m)=>`<div class="br"><span>${h(l)}</span><div class="bar"><i style="width:${v/m*100}%"></i></div><b>${v}</b></div>`;
+const stars=n=>`<span aria-label="${n} de 5">${'★'.repeat(n)}${'☆'.repeat(5-n)}</span>`;
+function tabs(l,b){const k=T[U.p]||l[0][0];return `<div class="tabs" role="tablist">${l.map(([i,t])=>`<button role="tab" aria-selected="${i==k}" onclick="T[U.p]='${i}';go()">${t}</button>`).join('')}</div><div role="tabpanel">${b[k]()}</div>`}
+function toast(m){const t=$('#toast');t.textContent=m;t.className='on';clearTimeout(toast.t);toast.t=setTimeout(()=>t.className='',3500)}
+function form(t,f,ok){const d=$('#dlg');d.innerHTML=`<form id="fm" onsubmit="return false" onkeydown="enter(event,dsave)"><h2>${t}</h2>${f.map(([k,l,y,o,r])=>{const q=r?' required':'';return `<label>${l}${r?' *':''}`+(y=='select'?`<select name="${k}"${q}>${o.map(x=>`<option>${h(x)}</option>`).join('')}</select>`:y=='area'?`<textarea name="${k}" rows="3"${q}></textarea>`:`<input name="${k}" type="${y||'text'}"${q} placeholder="${h(o||'')}">`)+'</label>'}).join('')}<div class="row"><button type="button" class="b s" onclick="$('#dlg').close()">Cancelar</button><button type="button" class="b" onclick="dsave()">Salvar</button></div></form>`;OK=ok;d.showModal()}
+let OK;const enter=(e,fn)=>{if(e.key=='Enter'&&e.target.tagName!='TEXTAREA'){e.preventDefault();fn(e.currentTarget)}};
+function dsave(){const f=$('#fm');if(!f.reportValidity())return;const d=Object.fromEntries(new FormData(f));$('#dlg').close();OK(d)}
+function help(){$('#dlg').innerHTML=`<div><h2>Como usar esta tela</h2><ol>${P[U.p].h.map(x=>`<li>${x}</li>`).join('')}</ol><button type="button" class="b" onclick="$('#dlg').close()">Entendi</button></div>`;$('#dlg').showModal()}
+function login(p,i){U={p,id:i};lg('Entrou no sistema');save();go();scrollTo(0,0);if(!D.seen[p]){D.seen[p]=1;save();help()}}
+function out(){U=null;go();scrollTo(0,0)}
+function lf(f){if(!f.reportValidity())return;const m=f.mail.value.trim().toLowerCase(),a=D.as.find(x=>x.e==m),u=D.us.find(x=>x.e==m);if(a)login('as',a.id);else if(u&&u.on!==false)login(u.p,u.id);else $('#err').textContent='Não encontramos esse e-mail, ou a conta está inativa. Para testar, use um dos perfis de demonstração.'}
+function tema(t){const b=document.body.classList;b.toggle('dk',t=='dk');b.toggle('hc',t=='hc');$('#dk').setAttribute('aria-pressed',t=='dk');$('#hc').setAttribute('aria-pressed',t=='hc');try{localStorage.setItem('apae-tema',t)}catch(e){}}
+function fz(d){FS=Math.min(24,Math.max(14,FS+d*2));document.documentElement.style.setProperty('--fs',FS+'px')}
+const home=()=>`<section class="hero"><h1>Encontre seu lugar no mercado de trabalho</h1><p class="lead">A APAE prepara pessoas com deficiência e conecta cada uma a empresas que querem contratar.</p></section>
+<div class="two"><section class="c"><h2>Entrar</h2><form class="fm" onsubmit="return false" onkeydown="enter(event,lf)"><label>E-mail<input name="mail" type="email" required autocomplete="username" placeholder="joao@apae.demo"></label><label>Senha<input name="pw" id="pw" type="password" required autocomplete="current-password" placeholder="No protótipo, qualquer senha serve"></label><label class="row" style="font-weight:400"><input type="checkbox" style="width:auto;margin:0" onchange="$('#pw').type=this.checked?'text':'password'"> Mostrar senha</label><p id="err" class="bad" role="alert"></p><button type="button" class="b" onclick="lf(this.form)">Entrar</button></form></section>
+<section><h2>Ou teste como</h2><div class="g">${[['as',1],['pr',11],['em',12],['ad',13]].map(([p,i])=>`<button class="c pick" onclick="login('${p}',${i})"><span class="ic">${P[p].ic}</span><b>${P[p].t.replace('Sou ','')}</b><span class="sm">${P[p].d}</span></button>`).join('')}</div></section></div>
+<ol class="how"><li><b>A APAE prepara</b><span>Oficinas e acompanhamento da equipe.</span></li><li><b>O sistema sugere vagas</b><span>Cruzamos habilidades e requisitos da vaga.</span></li><li><b>A empresa contrata</b><span>E a APAE acompanha a adaptação.</span></li></ol>
+<p class="sm">Protótipo acadêmico. Todos os dados são fictícios.</p>`;
+function vcard(v){const a=me(),m=mt(a,v),ap=D.ca.some(c=>c.a==a.id&&c.v==v.id);return `<article class="c"><h3>${h(v.t)}</h3><p class="mu">${h(v.e)}<br>${h(v.l)}<br>Salário: R$ ${v.r}</p><div class="br"><div class="bar"><i style="width:${m.p}%"></i></div><b>${m.p}%</b></div><p class="sm"><b>Compatibilidade com seu perfil</b></p><p class="sm">Você tem: ${chips(m.y,'ok')||'nada ainda'}</p>${m.m.length?`<p class="sm">Pode aprender: ${chips(m.m)}</p>`:''}<p class="sm">♿ ${h(v.a)}</p><button class="b" ${ap?'disabled':''} onclick="apply(${v.id})">${ap?'Candidatura enviada':'Quero me candidatar'}</button></article>`}
+function apply(i){const a=me();D.ca.push({a:a.id,v:i,s:'Em análise'});if(a.s<3)a.s=3;lg('Candidatou-se a '+vg(i).t);save();T.as='ca';toast('Candidatura enviada! Acompanhe a etapa aqui.');go()}
+function jn(i){D.of.find(o=>o.id==i).en.push(U.id);lg('Inscreveu-se em oficina');save();toast('Inscrição feita!');go()}
+function sp(f){if(!f.reportValidity())return;const d=Object.fromEntries(new FormData(f));Object.assign(me(),{sk:sl(d.sk),i:d.i,t:d.t,o:d.o});lg('Atualizou o perfil');save();toast('Perfil salvo.');go()}
+const V={
+as(){const a=me(),cs=D.ca.filter(c=>c.a==a.id),vs=D.vg.filter(v=>v.o).sort((x,y)=>mt(a,y).p-mt(a,x).p);
+const n=cs.some(c=>c.s=='Contratado')?['Parabéns pela contratação! A equipe da APAE vai acompanhar sua adaptação.']:cs.length?['Você tem candidaturas em andamento. Veja em que etapa cada uma está.','ca','Ver candidaturas']:a.s>=2?['Você está pronto! Escolha uma vaga abaixo e candidate-se.']:['Participe das oficinas para ficar pronto para as vagas.','of','Ver oficinas'];
+return hd('Olá, '+h(a.n.split(' ')[0]),'Aqui você encontra vagas que combinam com você e acompanha seu caminho até o emprego.')+
+`<ol class="st" aria-label="Sua etapa atual">${ST.map((s,i)=>`<li class="${i<a.s?'dn':i==a.s?'cu':''}" ${i==a.s?'aria-current="step"':''}>${s}</li>`).join('')}</ol>
+<div class="nx"><p><b>Próximo passo:</b> ${n[0]}</p>${n[1]?`<button class="b s" onclick="T.as='${n[1]}';go()">${n[2]}</button>`:''}</div>`+
+tabs([['vg','Vagas para você ('+vs.length+')'],['ca','Minhas candidaturas ('+cs.length+')'],['of','Oficinas'],['pf','Meu perfil']],{
+vg:()=>`<div class="g">${vs.map(vcard).join('')}</div>`,
+ca:()=>cs.length?cs.map(c=>{const v=vg(c.v);return `<article class="c row sp"><div><h3>${h(v.t)}</h3><p class="mu">${h(v.e)}</p></div>${chip(c.s,c.s=='Contratado'?'ok':c.s=='Não selecionado'?'no':'')}</article>`}).join(''):empty('Você ainda não se candidatou a nenhuma vaga.','vg','Ver vagas'),
+of:()=>`<div class="g">${D.of.map(o=>{const j=o.en.includes(a.id);return `<article class="c"><h3>${h(o.t)}</h3><p class="mu">${h(o.p)}, ${o.h} horas</p><p class="sm">${h(o.d)}</p>${chip(o.s)}${j?chip('Você participa','ok'):o.s!='Concluída'?`<p><button class="b s" onclick="jn(${o.id})">Quero participar</button></p>`:''}</article>`}).join('')}</div>`,
+pf:()=>`<form class="c fm" onsubmit="return false" onkeydown="enter(event,sp)"><label>Minhas habilidades (separe por vírgula)<input name="sk" value="${h(a.sk.join(', '))}"></label><label>Áreas de interesse<input name="i" value="${h(a.i)}"></label><label>Turno preferido<select name="t">${['Manhã','Tarde','Integral','Flexível'].map(x=>`<option ${x==a.t?'selected':''}>${x}</option>`).join('')}</select></label><label>Necessidades de acessibilidade<textarea name="o" rows="3">${h(a.o)}</textarea></label><button type="button" class="b" onclick="sp(this.form)">Salvar perfil</button></form>`})},
+pr(){return hd('Painel da equipe APAE','Cuide dos assistidos, das oficinas e das indicações para vagas.',`<button class="b" onclick="nAs()">+ Cadastrar assistido</button><button class="b s" onclick="nOf()">+ Nova oficina</button>`)+
+tabs([['as','Assistidos ('+D.as.length+')'],['of','Oficinas'],['ma','Vagas e matching'],['po','Pós-contratação']],{
+as:()=>`<label class="sm">Mostrar <select onchange="F=this.value;go()"><option value="">Todas as etapas</option>${ST.map((s,i)=>`<option value="${i}" ${F!==''&&F==i?'selected':''}>${s}</option>`).join('')}</select></label><div class="g">${D.as.filter(a=>F===''||a.s==F).map(a=>`<article class="c"><h3>${h(a.n)}</h3><p class="mu">${h(a.d)}</p><p>${chips(a.sk)}</p><label class="sm">Etapa <select onchange="stS(${a.id},this.value)">${ST.map((s,i)=>`<option value="${i}" ${i==a.s?'selected':''}>${s}</option>`).join('')}</select></label></article>`).join('')}</div>`,
+of:()=>`<div class="g">${D.of.map(o=>`<article class="c"><h3>${h(o.t)}</h3><p class="mu">${h(o.p)}, ${o.h} horas</p><p class="sm">${h(o.d||'')}</p>${chip(o.s)}${chip(o.en.length+' participantes')}</article>`).join('')}</div>`,
+ma:()=>{const v=vg(MV)||D.vg[0];return `<label class="sm">Vaga <select onchange="MV=this.value;go()">${D.vg.map(x=>`<option value="${x.id}" ${x.id==v.id?'selected':''}>${h(x.t)} (${h(x.e)})</option>`).join('')}</select></label><p class="sm">Requisitos: ${chips(v.q)}</p>`+D.as.map(a=>[a,mt(a,v)]).sort((x,y)=>y[1].p-x[1].p).map(([a,m])=>{const ap=D.ca.some(c=>c.a==a.id&&c.v==v.id);return `<article class="c"><div class="row sp"><div><h3>${h(a.n)}</h3><p class="sm">${h(a.d)}. Tem: ${h(m.y.join(', ')||'nenhum requisito')}</p></div><button class="b s" ${ap?'disabled':''} onclick="ind(${a.id},${v.id})">${ap?'Já indicado':'Indicar para a vaga'}</button></div><div class="br"><div class="bar"><i style="width:${m.p}%"></i></div><b>${m.p}%</b></div></article>`}).join('')},
+po:()=>{const l=D.as.filter(a=>a.s==4);return l.length?l.map(a=>{const c=D.ca.find(c=>c.a==a.id&&c.s=='Contratado'),f=D.fb.filter(x=>x.a==a.id);return `<article class="c"><div class="row sp"><div><h3>${h(a.n)}</h3><p class="mu">${c?h(vg(c.v).t+', '+vg(c.v).e):'Inserido no mercado'}</p></div><button class="b s" onclick="fbF(${a.id},${c?c.v:0})">Registrar acompanhamento</button></div>${f.map(fbi).join('')||'<p class="sm">Nenhum registro ainda.</p>'}</article>`}).join(''):empty('Nenhum assistido foi inserido no mercado ainda.','as','Ver assistidos')}})},
+em(){const n=nm(),mv=D.vg.filter(v=>v.e==n),cs=D.ca.filter(c=>mv.some(v=>v.id==c.v));
+return hd(h(n),'Anuncie vagas e conheça candidatos preparados pela APAE.',`<button class="b" onclick="nVg()">+ Anunciar vaga</button>`)+
+tabs([['vg','Minhas vagas ('+mv.length+')'],['cd','Candidatos ('+cs.length+')'],['fb','Feedbacks']],{
+vg:()=>mv.length?`<div class="g">${mv.map(v=>`<article class="c"><h3>${h(v.t)}</h3><p class="mu">${h(v.l)}<br>Salário: R$ ${v.r}</p><p class="sm">Pede: ${chips(v.q)}</p><p class="sm">${D.ca.filter(c=>c.v==v.id).length} candidatos. ${chip(v.o?'Vaga aberta':'Vaga fechada',v.o?'ok':'no')}</p><button class="b s" onclick="tgV(${v.id})">${v.o?'Fechar vaga':'Reabrir vaga'}</button></article>`).join('')}</div>`:empty('Você ainda não anunciou vagas.','vg','Anunciar agora').replace("T[U.p]='vg';go()",'nVg()'),
+cd:()=>cs.length?cs.map(c=>{const a=D.as.find(x=>x.id==c.a),v=vg(c.v),i=D.ca.indexOf(c);return `<article class="c"><div class="row sp"><div><h3>${h(a.n)}</h3><p class="mu">Vaga: ${h(v.t)}. Compatibilidade: ${mt(a,v).p}%</p></div><label class="sm">Etapa <select onchange="stC(${i},this.value)">${['Em análise','Entrevista','Contratado','Não selecionado'].map(s=>`<option ${s==c.s?'selected':''}>${s}</option>`).join('')}</select></label></div><p class="sm">Habilidades: ${chips(a.sk)}</p><p class="sm">Acessibilidade: ${h(a.o||'sem observações')}</p>${c.s=='Contratado'?`<button class="b s" onclick="fbF(${a.id},${v.id})">Enviar feedback</button>`:''}</article>`}).join(''):empty('Ainda não há candidatos. Assim que a APAE indicar alguém, ele aparece aqui.','vg','Ver minhas vagas'),
+fb:()=>D.fb.filter(f=>mv.some(v=>v.id==f.v)).map(fbi).join('')||'<div class="c emp">Nenhum feedback enviado ainda.</div>'})},
+ad(){const t=D.as.length,k=(n,l)=>`<div class="k"><b>${n}</b><span>${l}</span></div>`,c=s=>D.as.filter(a=>a.s==s).length,mx=Math.max(1,t),ins=c(4);
+const R=[...D.as.map(o=>({o,k:'as',p:'as'})),...D.us.map(o=>({o,k:'us',p:o.p}))];
+return hd('Indicadores e relatórios','Visão geral dos assistidos, vagas e oficinas.',`<button class="b s" onclick="ex()">Exportar assistidos (CSV)</button><button class="b s" onclick="rs()">Restaurar dados de exemplo</button>`)+
+`<div class="g">${k(t,'Assistidos')}${k(c(1),'Em qualificação')}${k(ins,'Inseridos no mercado')}${k(D.of.filter(o=>o.s=='Ativa').length,'Oficinas ativas')}${k(D.vg.filter(v=>v.o).length,'Vagas abertas')}${k(Math.round(ins/mx*100)+'%','Taxa de inserção')}</div>`+
+tabs([['gr','Gráficos'],['us','Usuários'],['lg','Registro de ações']],{
+gr:()=>`<div class="c"><h3>Assistidos por etapa</h3>${ST.map((s,i)=>bar(s,c(i),mx)).join('')}</div><div class="c"><h3>Participantes por oficina</h3>${D.of.map(o=>bar(o.t,o.en.length,mx)).join('')}</div>`,
+us:()=>`<p><button class="b" onclick="nUs()">+ Novo usuário</button></p><div class="c tw"><table><tr><th>Nome</th><th>E-mail</th><th>Perfil</th><th>Situação</th><th>Ação</th></tr>${R.map(r=>`<tr><td>${h(r.o.n)}</td><td>${h(r.o.e)}</td><td>${PL[r.p]}</td><td>${chip(r.o.on===false?'Inativo':'Ativo',r.o.on===false?'no':'ok')}</td><td><button class="b s" onclick="tgU('${r.k}',${r.o.id})">${r.o.on===false?'Ativar':'Desativar'}</button></td></tr>`).join('')}</table></div>`,
+lg:()=>D.lg.length?`<div class="c">${D.lg.slice(0,40).map(l=>`<p class="sm"><b>${h(l.t)}</b> ${h(l.u)}: ${h(l.m)}</p>`).join('')}</div>`:'<div class="c emp">Nenhuma ação registrada ainda.</div>'})}};
+const fbi=f=>`<div class="c"><b>${h(D.as.find(a=>a.id==f.a).n)}</b> ${stars(f.n)}<p>${h(f.c)}</p><p class="sm">${h(f.by)}, ${h(f.d)}</p></div>`;
+function fbF(a,v){form('Registrar acompanhamento',[['n','Como está a adaptação?','select',['5 – Excelente','4 – Boa','3 – Regular, com acompanhamento','2 – Precisa de ajuste','1 – Desafios críticos']],['c','Comentário','area','',1]],d=>{D.fb.unshift({a,v,by:nm(),n:+d.n[0],c:d.c,d:new Date().toLocaleDateString('pt-BR')});lg('Registrou acompanhamento');save();toast('Registro salvo.');go()})}
+function nAs(){form('Cadastrar assistido',[['n','Nome completo','text','Ex.: Maria Souza',1],['e','E-mail de acesso','email','nome@exemplo.com',1],['d','Tipo de deficiência','select',['Intelectual','Múltipla','Física','Auditiva','Visual','TEA']],['sk','Habilidades (separe por vírgula)','text','Ex.: atendimento, digitação',1],['i','Interesses profissionais','text','Ex.: recepção'],['o','Observações e acessibilidade','area']],d=>{D.as.push({id:nid(D.as),n:d.n,e:d.e,d:d.d,s:0,sk:sl(d.sk),i:d.i,t:'Flexível',o:d.o});lg('Cadastrou o assistido '+d.n);save();toast('Assistido cadastrado.');go()})}
+function nOf(){form('Nova oficina',[['t','Título','text','Ex.: Informática básica',1],['p','Instrutor','text','Ex.: Prof. Carlos',1],['h','Carga horária (horas)','number','Ex.: 40'],['s','Situação','select',['Planejada','Ativa','Concluída']],['d','Conteúdo','area']],d=>{D.of.push({id:nid(D.of),t:d.t,p:d.p,h:d.h||0,s:d.s,d:d.d,en:[]});lg('Criou a oficina '+d.t);save();toast('Oficina criada.');go()})}
+function nVg(){form('Anunciar vaga',[['t','Cargo','text','Ex.: Auxiliar administrativo',1],['r','Salário (R$)','number','Ex.: 1800'],['l','Local de trabalho','text','Ex.: São Paulo'],['q','Habilidades exigidas (separe por vírgula)','text','Ex.: atendimento, digitação',1],['a','Acessibilidade oferecida','text','Ex.: rampa e intérprete de Libras'],['x','Atividades do cargo','area']],d=>{D.vg.push({id:nid(D.vg),t:d.t,e:nm(),r:d.r||0,l:d.l,q:sl(d.q),a:d.a||'Não informada',x:d.x,o:true});lg('Anunciou a vaga '+d.t);save();toast('Vaga publicada!');T.em='vg';go()})}
+function nUs(){form('Novo usuário',[['n','Nome','text','Ex.: Empresa Exemplo',1],['e','E-mail','email','nome@exemplo.com',1],['p','Perfil','select',['Equipe APAE','Empresa','Gestão']]],d=>{D.us.push({id:nid(D.us),n:d.n,e:d.e,p:{'Equipe APAE':'pr','Empresa':'em','Gestão':'ad'}[d.p]});lg('Criou o usuário '+d.n);save();toast('Usuário criado.');go()})}
+function stS(i,v){const a=D.as.find(x=>x.id==i);a.s=+v;lg(a.n+' passou para '+ST[v]);save();toast('Etapa atualizada.');go()}
+function ind(a,v){D.ca.push({a,v,s:'Em análise'});lg('Indicou assistido para '+vg(v).t);save();toast('Indicação enviada para a empresa.');go()}
+function stC(i,v){const c=D.ca[i];c.s=v;if(v=='Contratado')D.as.find(x=>x.id==c.a).s=4;lg('Atualizou candidatura para '+v);save();toast('Etapa atualizada.');go()}
+function tgV(i){const v=vg(i);v.o=!v.o;save();go()}
+function tgU(k,i){const o=(k=='as'?D.as:D.us).find(x=>x.id==i);o.on=o.on===false;lg((o.on===false?'Desativou ':'Ativou ')+o.n);save();go()}
+function ex(){const r=[['Nome','E-mail','Deficiência','Etapa','Habilidades'],...D.as.map(a=>[a.n,a.e,a.d,ST[a.s],a.sk.join('; ')])],l=document.createElement('a');l.href=URL.createObjectURL(new Blob(['\ufeff'+r.map(x=>x.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(';')).join('\n')],{type:'text/csv'}));l.download='assistidos-apae.csv';l.click()}
+function rs(){$('#dlg').innerHTML=`<div><h2>Restaurar dados de exemplo?</h2><p>Suas alterações serão perdidas.</p><div class="row"><button type="button" class="b s" onclick="$('#dlg').close()">Cancelar</button><button type="button" class="b" onclick="rs2()">Confirmar</button></div></div>`;$('#dlg').showModal()}
+function rs2(){$('#dlg').close();D=seed();T={};save();go();toast('Dados restaurados.')}
+function go(){$('#help').hidden=!U;$('#usr').innerHTML=U?`<span>${h(nm())}</span><button class="b s" onclick="out()">Sair</button>`:'';$('#main').innerHTML=U?V[U.p]():home()}
+let TM=null;try{TM=localStorage.getItem('apae-tema')}catch(e){}
+tema(TM===null?(matchMedia('(prefers-color-scheme: dark)').matches?'dk':''):TM);
+go();
+</script>
+</body>
+</html>
